@@ -4,10 +4,13 @@ const viewsController = require('./../controllers/viewController')
 const authController = require('./../controllers/authController')
 
 // router.get('/', viewsController.getHome)
-// router.get('/login', viewsController.getLoginForm)
+router.get('/login', viewsController.getLoginPage)
 // router.get('/signup', viewsController.getSignupForm)
 // router.get('/me',authController.protect,viewsController.getProfile)
 
+
+
+/* Reset form for password */
 router.get('/resetPassword/:token', (req, res) => {
     // Render the form or a page to enter a new password
     res.send(`
@@ -21,4 +24,6 @@ router.get('/resetPassword/:token', (req, res) => {
         </form>
     `);
 });
+/* EOL */ 
+
 module.exports = router
