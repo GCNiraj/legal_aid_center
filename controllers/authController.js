@@ -90,6 +90,11 @@ exports.login = async (req, res, next) => {
             return next(new AppError('Incorrect email or password', 401));
         }
 
+        createSendToken(user, 200, res)
+
+        /* 2FA possibility start from here 
+
+
         // Generate OTP and expiration time
         const otp = generateOTP();
         const otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
@@ -114,6 +119,8 @@ exports.login = async (req, res, next) => {
             status: 'success',
             message: 'OTP sent to your email. Please verify to complete the login process.'
         });
+
+        end of 2FA possibility */
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

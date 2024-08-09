@@ -16,7 +16,6 @@ app.use('/api/v1/users', userRouter)
 app.use('/', viewRouter)
 
 app.use((err, req, res, next) => {
-    console.log("In here")
     logger.error(err, err.message);
     res.status(500).send({ message: err.message, error: err });
 });
