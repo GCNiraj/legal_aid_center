@@ -21,6 +21,7 @@ const login = async (email, password) => {
             console.log(obj)
         }
     } catch (err) {
+        console.log(err.response)
         let message = 
             typeof err.response !== 'undefined'
                 ?err.response.data.message

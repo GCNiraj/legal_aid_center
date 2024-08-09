@@ -121,6 +121,10 @@ exports.login = async (req, res, next) => {
             return next(new AppError('Incorrect email or password', 401));
         }
 
+        if (user.isVerified === false) {
+            return next(new AppError('Unauthorized', 401));
+        }
+
         createSendToken(user, 200, res)
 
         /* 2FA possibility start from here 
