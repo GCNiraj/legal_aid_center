@@ -16,11 +16,13 @@ const userSchema = new mongoose.Schema({
     },
     cid: {
         type: String,
-        required: [true, 'Please enter your CID No.']
+        required: [true, 'Please enter your CID No.'],
+        unique: true
     }, 
     phone: {
         type: String,
-        required: [true,'Please enter your phone number']
+        required: [true,'Please enter your phone number'],
+        unique: true
     },
     gender:{
         type: String,
