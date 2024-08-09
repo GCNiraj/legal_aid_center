@@ -21,12 +21,17 @@ const login = async (email, password) => {
             console.log(obj)
         }
     } catch (err) {
-        console.log(err.response)
+        err.response.data.message
         let message = 
             typeof err.response !== 'undefined'
                 ?err.response.data.message
                 :err.message
-        showAlert('error', 'Error: Incorrect email or password',message)
+        
+        if (err.response.data.message === 'Unauthorized'){
+            showAlert('error', 'Error: Unverified email please verify your email',message)
+        }else{
+            showAlert('error', 'Error: Incorrect email or password',message)
+        }
     }
 }
 

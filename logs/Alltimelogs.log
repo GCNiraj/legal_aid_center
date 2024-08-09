@@ -929,3 +929,36 @@
   label: 'Legal Aid Center Website',
   timestamp: 'Aug-09-2024 18:19:55'
 }
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:23:01'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:23:33'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:25:31'
+}
