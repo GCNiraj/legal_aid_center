@@ -83,3 +83,72 @@ exports.createApplication = async (req, res) => {
         res.status(500).json({error: err.message})
     }
 }
+
+exports.updateApplication = async (req, res) => {
+    try {
+        const filteredBody = filterObj(req.body, 'registration_date', 'name', 'cid', 'dob', 'gender', 'occupation', 'number', 'email', 'current_address', 'permanent_address', 'institute_name', 'dealing_official', 'total_household_income', 'total_household_member', 'household_members', 'user')
+
+        if (req.body.verification_document !== 'undefined') {
+            filteredBody.verification_document = req.files[0].filename
+        }
+        if (req.body.family_tree !== 'undefined') {
+            filteredBody.family_tree = req.files[1].filename
+        }
+        if (req.body.householdincome_document !== 'undefined') {
+            filteredBody.householdincome_document = req.files[2].filename
+        }
+        if (req.body.householddisposable_document !== 'undefined') {
+            filteredBody.householddisposable_document = req.files[3].filename
+        }
+        if (req.body.case_background !== 'undefined') {
+            filteredBody.case_background = req.files[4].filename
+        }
+        if (req.files.length > 5 && req.files[5].fieldname === 'disability_documents') {
+            filteredBody.disability_documents = req.files[5].filename
+        }
+        if (req.files.length > 5 && req.files[5].fieldname === 'additional_documents') {
+            filteredBody.additional_documents = req.files[5].filename
+        } else if (req.files.length > 6 && req.files[6].fieldname === 'additional_documents') {
+            filteredBody.additional_documents = req.files[6].filename
+        }
+
+        const application = await Application.findByIdAndUpdate(req.params.id, filteredBody, {
+            new: true,
+            runValidators: true
+        })
+
+        if (!application) {
+            return res.status(404).json({ error: 'No application found with that ID' })
+        }
+
+        res.status(200).json({ data: application, status: 'success' })
+    } catch (err) {
+        res.status(500).json({ error: err.message })
+    }
+}
+
+exports.deleteApplication = async (req, res) => {
+    try {
+        const application = await Application.findByIdAndDelete(req.params.id)
+
+        if (!application) {
+            return res.status(404).json({ error: 'No application found with that ID' })
+        }
+
+        res.status(204).json({ data: null, status: 'success' })
+    } catch (err) {
+        res.status(500).json({ error: err.message })
+    }
+}
+
+exports.getApplication = async (req, res, next) => {
+    try {
+        const application = await Application.findById(req.params.id)
+        if (!application) {
+            return res.status(404).json({ error: 'No application found with that ID' })
+        }
+        res.status(200).json({ data: application, status: 'success' })
+    } catch (err) {
+        res.status(500).json({ error: err.message })
+    }
+}
