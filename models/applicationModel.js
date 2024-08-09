@@ -16,6 +16,10 @@ const applicationSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter your Date of Birth']
     },
+    gender:{
+        type: String,
+        enum : ['Male','Female']
+    },
     occupation: {
         type: String,
         requried: [true, 'Please enter your occupation']

@@ -1,0 +1,121 @@
+body {
+    overflow-y:hidden;
+}
+
+.login-form {
+    margin-top: 10rem;
+    padding: 0 7rem 0 7rem;
+}
+
+.image-col {
+    height: 100vw;
+    background: #004466;
+    padding: 10rem 7rem 0 7rem;
+}
+
+
+// Dzonkgha - English Toggle Button
+
+.checkbox-wrapper-51 {
+    margin-top:100px;
+}
+
+.checkbox-wrapper-51 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+  
+  .checkbox-wrapper-51 .toggle {
+    position: relative;
+    display: inline;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .checkbox-wrapper-51 .toggle:before {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 40px;
+    height: 22px;
+    display: inline-block;
+    background: #c8ccd4;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+  }
+  
+  .checkbox-wrapper-51 .toggle span {
+    position: absolute;
+    margin-top: -0.4rem;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(154,153,153,0.75);
+    transition: all 0.2s ease;
+  }
+  
+  .checkbox-wrapper-51 .toggle span svg {
+    margin: -0.15rem 0 0 0;
+    fill: none;
+  }
+  
+  .checkbox-wrapper-51 .toggle span svg path {
+    stroke: #c8ccd4;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 24;
+    stroke-dashoffset: 0;
+    transition: all 0.5s linear;
+  }
+  
+  .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle:before {
+    background: #1175c7;
+  }
+  
+  .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span {
+    transform: translateX(18px);
+  }
+  
+  .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span path {
+    stroke: #000000;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+  }
+
+
+  //form styling
+  .submit-btn {
+    color: #298E6E;
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .image-col {
+        height: 100vh;
+        background: #004466;
+        padding: 10rem 2rem 0 2rem;
+    }
+
+    .login-form {
+        margin-top: 8rem;
+        padding: 0 1.5rem 0 1.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .login-form {
+        width: 70vw;
+        margin-top: 6rem;
+        padding: 0 0rem 0 0rem;
+        margin-left: 15vw;
+    }
+    
+  }

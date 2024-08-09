@@ -58,3 +58,25 @@
   label: 'Legal Aid Center Website',
   timestamp: 'Aug-09-2024 10:38:09'
 }
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 13:20:51'
+}
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 13:21:13'
+}
