@@ -50,16 +50,43 @@ const generateOTP = () => {
     return crypto.randomInt(100000, 999999).toString();
 };
 
+// exports.signup = async (req, res, next) => {
+//     try {
+//         const otp = generateOTP();
+//         const otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
+
+
+//         const newUser = await User.create({
+//             ...req.body,
+//             otp,
+//             otpExpires
+//         });
+
+//         const mailOptions = {
+//             from: 'info@law.com',
+//             to: newUser.email,
+//             subject: 'Your OTP Code',
+//             text: `Your OTP code is ${otp}. Please use it to complete your signup process.`
+//         };
+
+//         await transporter.sendMail(mailOptions);
+
+//         createSendToken(newUser, 201, res);
+//     } catch (err) {
+//         res.status(500).json({ error: err.message });
+//     }
+// };
+
 exports.signup = async (req, res, next) => {
     try {
         const otp = generateOTP();
         const otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
 
-
         const newUser = await User.create({
             ...req.body,
             otp,
-            otpExpires
+            otpExpires,
+            isVerified: false // Add a flag to indicate whether the user is verified
         });
 
         const mailOptions = {
@@ -71,14 +98,18 @@ exports.signup = async (req, res, next) => {
 
         await transporter.sendMail(mailOptions);
 
-        createSendToken(newUser, 201, res);
+        res.status(201).json({
+            status: 'success',
+            message: 'OTP sent to your email. Please verify to complete the signup process.'
+        });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
+
 exports.login = async (req, res, next) => {
     try {
-        const { email, password } = req.body
+        const { email, password } = req.body;
 
         if (!email || !password) {
             return next(new AppError('Please provide an email and password!', 400));
@@ -125,6 +156,34 @@ exports.login = async (req, res, next) => {
         res.status(500).json({ error: err.message });
     }
 };
+// exports.verifyOtp = async (req, res, next) => {
+//     try {
+//         const { email, otp } = req.body;
+
+//         const user = await User.findOne({ email });
+
+//         if (!user) {
+//             return res.status(400).json({ error: 'User not found' });
+//         }
+
+//         if (user.otp !== otp) {
+//             return res.status(400).json({ error: 'Invalid OTP' });
+//         }
+
+//         if (Date.now() > user.otpExpires) {
+//             return res.status(400).json({ error: 'OTP has expired' });
+//         }
+
+//         user.otp = undefined; // Clear OTP
+//         user.otpExpires = undefined; // Clear OTP expiration
+//         await user.save();
+
+//         createSendToken(user, 200, res);
+//     } catch (err) {
+//         res.status(500).json({ error: err.message });
+//     }
+// };
+
 exports.verifyOtp = async (req, res, next) => {
     try {
         const { email, otp } = req.body;
@@ -135,23 +194,29 @@ exports.verifyOtp = async (req, res, next) => {
             return res.status(400).json({ error: 'User not found' });
         }
 
+        // Check if OTP matches
         if (user.otp !== otp) {
             return res.status(400).json({ error: 'Invalid OTP' });
         }
 
+        // Check if OTP has expired
         if (Date.now() > user.otpExpires) {
             return res.status(400).json({ error: 'OTP has expired' });
         }
 
-        user.otp = undefined; // Clear OTP
-        user.otpExpires = undefined; // Clear OTP expiration
+        // Clear OTP and OTP expiration, and mark the user as verified
+        user.otp = undefined;
+        user.otpExpires = undefined;
+        user.isVerified = true; // Optionally add this field if you want to mark the user as verified
         await user.save();
 
+        // Now, create and send the token
         createSendToken(user, 200, res);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
+
 exports.forgotPassword = async (req, res, next) => {
     try {
         const { email } = req.body;
@@ -252,7 +317,6 @@ exports.logout = (req, res) => {
 
 exports.protect = async (req, res, next) => {
     try {
-
         // 1) Getting token and check if it's there
         let token
         if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
@@ -277,9 +341,6 @@ exports.protect = async (req, res, next) => {
                 new AppError('The user belonging to this token no longer exist',401),
             )
         }
-
-        
-
         // Grant access to protected route
         req.user = freshUser
         next()
