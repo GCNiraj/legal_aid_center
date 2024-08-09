@@ -5,7 +5,7 @@ const authController = require('./../controllers/authController')
 
 // router.get('/', viewsController.getHome)
 router.get('/login', viewsController.getLoginPage)
-// router.get('/signup', viewsController.getSignupForm)
+router.get('/register', viewsController.getRegisterPage)
 // router.get('/me',authController.protect,viewsController.getProfile)
 
 
