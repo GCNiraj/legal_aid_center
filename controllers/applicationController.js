@@ -34,14 +34,7 @@ const filterObj = (obj, ...allowedFields) => {
     return newObj
 }
 
-
 exports.uploadVerificationDocument = upload.any('verification_document')
-// exports.uploadFamilyTree = upload.single('family_tree')
-// exports.uploadHouseholdIncome = upload.single('householdincome_document')
-// exports.uploadHouseholddisposable = upload.single('householddisposable_document')
-// exports.uploadCaseDocument = upload.single('case_background')
-// exports.uploadDisabilityDocument = upload.single('disability_document')
-// exports.uploadAdditionalDocument = upload.single('additional_document')
 
 exports.getAllApplications = async (req, res, next) => {
     try{
