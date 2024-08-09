@@ -1,0 +1,36 @@
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/UNDP-Hackathon/server/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'winston custom format',
+  timestamp: 'Aug-08-2024 16:34:11'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/UNDP-Hackathon/server/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'winston custom format',
+  timestamp: 'Aug-08-2024 16:34:13'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/UNDP-Hackathon/server/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'winston custom format',
+  timestamp: 'Aug-08-2024 16:34:13'
+}
