@@ -4,19 +4,18 @@ const multer = require('multer')
 
 const multerStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        console.log("In here first")
         cb(null, 'archieve/application_data')
     },
-    filename: (req, res, cb) => {
-        var obj = JSON.parse(req.cookies.token)
-        console.log(obj)
+    filename: (req, file, cb) => {
+        // var obj = JSON.parse(req.cookies.token)
         const ext = file.mimetype.split('/')[1]
-        cb(null, `user-${obj['_id']}-${Date.now()}.${ext}`)
+        // cb(null, `user-${obj['_id']}-${Date.now()}.${ext}`)
+        cb(null, `user-${req.user.id}-${Date.now()}.${ext}`)
+        console.log(req.user.id)
         console.log("here")
     }
 })
 const multerFilter = (req, file, cb) => {
-    console.log("No way")
     if ((file.mimetype.startsWith('video')) === false)  {
         cb(null, true)
     }else {
@@ -57,6 +56,7 @@ exports.getAllApplications = async (req, res, next) => {
 
 exports.createApplication = async (req, res) => {
     try {
+        console.log("In here")
 
         const filteredBody = filterObj(req.body, 'registration_date','name','cid','dob','gender','occupation','number','email','current_address','permanent_address','institute_name','dealing_official','total_household_income','total_household_members','household_members','user')
         

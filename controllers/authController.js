@@ -78,7 +78,7 @@ exports.signup = async (req, res, next) => {
 };
 exports.login = async (req, res, next) => {
     try {
-        const { email, password } = req.body;
+        const { email, password } = req.body
 
         if (!email || !password) {
             return next(new AppError('Please provide an email and password!', 400));
@@ -252,6 +252,7 @@ exports.logout = (req, res) => {
 
 exports.protect = async (req, res, next) => {
     try {
+
         // 1) Getting token and check if it's there
         let token
         if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
@@ -276,6 +277,9 @@ exports.protect = async (req, res, next) => {
                 new AppError('The user belonging to this token no longer exist',401),
             )
         }
+
+        
+
         // Grant access to protected route
         req.user = freshUser
         next()
