@@ -141,6 +141,11 @@ const applicationSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: [true, 'Application must belong to a user.']
+    },
+    verified_status: {
+        type: String,
+        enum: ['Rejected','Pending','Approved'],
+        default: 'Pending'
     }
 })
 
