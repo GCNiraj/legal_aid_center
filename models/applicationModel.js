@@ -18,7 +18,7 @@ const applicationSchema = new mongoose.Schema({
     },
     gender:{
         type: String,
-        enum : ['Male','Female']
+        enum : ['Male','Female','Other']
     },
     occupation: {
         type: String,
@@ -150,6 +150,9 @@ const applicationSchema = new mongoose.Schema({
         type: String,
         enum: ['Rejected','Pending','Approved'],
         default: 'Pending'
+    },
+    remarks:{
+        type: String
     }
 })
 

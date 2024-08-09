@@ -10,9 +10,7 @@ const multerStorage = multer.diskStorage({
         // var obj = JSON.parse(req.cookies.token)
         const ext = file.mimetype.split('/')[1]
         // cb(null, `user-${obj['_id']}-${Date.now()}.${ext}`)
-        cb(null, `user-${req.user.id}-${Date.now()}.${ext}`)
-        console.log(req.user.id)
-        console.log("here")
+        cb(null, `user-${req.user.id}-${file.fieldname}-${Date.now()}.${ext}`)
     }
 })
 const multerFilter = (req, file, cb) => {
@@ -37,13 +35,13 @@ const filterObj = (obj, ...allowedFields) => {
 }
 
 
-exports.uploadVerificationDocument = upload.single('verification_document')
-exports.uploadFamilyTree = upload.single('family_tree')
-exports.uploadHouseholdIncome = upload.single('householdincome_document')
-exports.uploadHouseholddisposable = upload.single('householddisposable_document')
-exports.uploadCaseDocument = upload.single('case_background')
-exports.uploadDisabilityDocument = upload.single('disability_document')
-exports.uploadAdditionalDocument = upload.single('additional_document')
+exports.uploadVerificationDocument = upload.any('verification_document')
+// exports.uploadFamilyTree = upload.single('family_tree')
+// exports.uploadHouseholdIncome = upload.single('householdincome_document')
+// exports.uploadHouseholddisposable = upload.single('householddisposable_document')
+// exports.uploadCaseDocument = upload.single('case_background')
+// exports.uploadDisabilityDocument = upload.single('disability_document')
+// exports.uploadAdditionalDocument = upload.single('additional_document')
 
 exports.getAllApplications = async (req, res, next) => {
     try{
@@ -56,31 +54,33 @@ exports.getAllApplications = async (req, res, next) => {
 
 exports.createApplication = async (req, res) => {
     try {
-        console.log("In here")
+        req.body.current_address = [{"current_village":req.body.current_village,"current_gewog":req.body.current_gewog,"current_dzongkhag":req.body.current_dzongkhag}]
+        req.body.permanent_address = [{"permanent_village":req.body.permanent_village,"permanent_gewog":req.body.permanent_gewog,"permanent_dzongkhag":req.body.permanent_dzongkhag}]
+        const filteredBody = filterObj(req.body, 'registration_date','name','cid','dob','gender','occupation','number','email','current_address','permanent_address','institute_name','dealing_official','total_household_income','total_household_member','household_members','user')
 
-        const filteredBody = filterObj(req.body, 'registration_date','name','cid','dob','gender','occupation','number','email','current_address','permanent_address','institute_name','dealing_official','total_household_income','total_household_members','household_members','user')
-        
         console.log(req)
         if (req.body.verification_document !== 'undefined'){
-            filteredBody.verification_document = req.file.filename
+            filteredBody.verification_document = req.files[0].filename
         }
         if (req.body.family_tree !== 'undefined'){
-            filteredBody.photo = req.file.filename
+            filteredBody.family_tree = req.files[1].filename
         }
         if (req.body.householdincome_document !== 'undefined'){
-            filteredBody.photo = req.file.filename
+            filteredBody.householdincome_document = req.files[2].filename
         }
         if (req.body.householddisposable_document !== 'undefined'){
-            filteredBody.photo = req.file.filename
+            filteredBody.householddisposable_document = req.files[3].filename
         }
         if (req.body.case_background !== 'undefined'){
-            filteredBody.photo = req.file.filename
+            filteredBody.case_background = req.files[4].filename
         }
-        if (req.body.disability_document !== 'undefined'){
-            filteredBody.photo = req.file.filename
+        if (req.files.length>5 && req.files[5].fieldname === 'disability_documents'){
+            filteredBody.disability_documents = req.files[5].filename
         }
-        if (req.body.additional_document !== 'undefined'){
-            filteredBody.photo = req.file.filename
+        if (req.files.length>5 && req.files[5].fieldname === 'additional_documents'){
+            filteredBody.additional_documents = req.files[5].filename
+        }else if (req.files.length>6 && req.files[6].fieldname === 'additional_documents'){
+            filteredBody.additional_documents = req.files[6].filename
         }
 
         const application = await Application.create(filteredBody)

@@ -5,6 +5,6 @@ const router = express.Router()
 
 router
     .route('/')
-    .post(authController.protect, applicationController.uploadVerificationDocument, applicationController.uploadFamilyTree, applicationController.uploadHouseholdIncome, applicationController.uploadHouseholddisposable, applicationController.uploadCaseDocument, applicationController.uploadDisabilityDocument, applicationController.uploadAdditionalDocument, applicationController.createApplication)
+    .post(authController.protect, applicationController.uploadVerificationDocument, applicationController.createApplication)
 
 module.exports = router
