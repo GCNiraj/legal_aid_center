@@ -14,6 +14,5 @@ router
     .patch(authController.protect, applicationController.uploadVerificationDocument, applicationController.updateApplication) 
     .delete(authController.protect, applicationController.deleteApplication); 
 
-module.exports = router;
 
 module.exports = router
