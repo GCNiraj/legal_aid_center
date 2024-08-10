@@ -14,9 +14,9 @@ router.get('/totalApplications', applicationController.getTotalApplications);
 
 router
     .route('/:id')
-    .put(authController.protect, applicationController.updateDetails)
+    // .put(authController.protect, applicationController.updateDetails)
     .get(authController.protect, applicationController.getApplication) 
-    .patch(authController.protect, applicationController.uploadVerificationDocument, applicationController.updateApplication) 
+    .patch(authController.protect, applicationController.updateDetails) 
     .delete(authController.protect, applicationController.deleteApplication); 
 
 

@@ -24,3 +24,8 @@ exports.getApplicationPage = (req, res) => {
 exports.getApplications = (req, res) => {
     res.sendFile(path.join(__dirname,'../','views','application.html'))
 } 
+
+/* Application Details Page */
+exports.getApplicationDetails = (req, res) => {
+    res.sendFile(path.join(__dirname,'../','views','applicationDetails.html'))
+} 

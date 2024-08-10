@@ -104,7 +104,11 @@ exports.createApplication = async (req, res) => {
 
 exports.updateDetails = async (req, res) => {
     try{
-        const application = await Application.findByIdAndUpdate(req.params.id, req.body)
+        const application = await Application.findById(req.params.id)
+        console.log(req.body.verified_status)
+        application.verified_status = req.body.verified_status
+        application.remarks = req.body.remarks
+        application.save()
         res.json({ data: application, status: "success"});
     }catch (err) {
         res.status(500).json({error: err.message})
@@ -174,7 +178,7 @@ exports.getApplication = async (req, res, next) => {
         if (!application) {
             return res.status(404).json({ error: 'No application found with that ID' })
         }
-        res.status(200).json({ data: application, status: 'success' })
+        res.json({ data: application, status: "success"});
     } catch (err) {
         res.status(500).json({ error: err.message })
     }

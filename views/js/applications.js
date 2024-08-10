@@ -57,5 +57,7 @@ function formatCurrentDate() {
 }
 
 function recordId(id){
-    localStorage.setItem('application_id',id);
+    localStorage.setItem('application_id',id)
+    location.assign('/applicationDetails')
+    console.log("Cause")
 }
