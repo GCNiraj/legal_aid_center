@@ -95,3 +95,119 @@ exports.deleteCase = async (req, res) => {
         });
     }
 };
+
+exports.getDzongkhagCaseReport = async (req, res) => {
+    try {
+        const report = await Case.aggregate([
+            {
+                $addFields: {
+                    appointment_date_as_date: {
+                        $dateFromString: { dateString: "$appointment_date" }
+                    }
+                }
+            },
+            {
+                $group: {
+                    _id: "$dzongkhag",
+                    totalCases: { $sum: 1 },
+                    casesByYear: {
+                        $push: {
+                            year: { $year: "$appointment_date_as_date" }, 
+                            caseCount: 1
+                        }
+                    }
+                }
+            },
+            {
+                $sort: { _id: 1 } 
+            }
+        ]);
+        
+        res.status(200).json({
+            status: 'success',
+            data: report
+        });
+    } catch (err) {
+        res.status(400).json({
+            status: 'fail',
+            message: err.message
+        });
+    }
+};
+
+
+exports.getCasesByNature = async (req, res) => {
+    try {
+        const report = await Case.aggregate([
+            {
+                $group: {
+                    _id: "$nature_of_case", 
+                    totalCases: { $sum: 1 }
+                }
+            },
+            {
+                $sort: { _id: 1 } 
+            }
+        ]);
+        res.status(200).json({
+            status: 'success',
+            data: report
+        });
+    } catch (err) {
+        res.status(400).json({
+            status: 'fail',
+            message: err.message
+        });
+    }
+};
+
+exports.getCasesByStatus = async (req, res) => {
+    try {
+        const report = await Case.aggregate([
+            {
+                $group: {
+                    _id: "$case_status", 
+                    totalCases: { $sum: 1 }
+                }
+            },
+            {
+                $sort: { _id: 1 } 
+            }
+        ]);
+        res.status(200).json({
+            status: 'success',
+            data: report
+        });
+    } catch (err) {
+        res.status(400).json({
+            status: 'fail',
+            message: err.message
+        });
+    }
+};
+
+exports.getCasesByFeeStructure = async (req, res) => {
+    try {
+        const casesByFeeStructure = await Case.aggregate([
+            {
+                $group: {
+                    _id: '$fee_structure',  
+                    total: { $sum: 1 }  
+                }
+            },
+            {
+                $sort: { _id: 1 }  
+            }
+        ]);
+
+        res.status(200).json({
+            status: 'success',
+            data: casesByFeeStructure
+        });
+    } catch (err) {
+        res.status(400).json({
+            status: 'fail',
+            message: err.message
+        });
+    }
+};

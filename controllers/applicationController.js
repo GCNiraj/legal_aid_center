@@ -152,3 +152,29 @@ exports.getApplication = async (req, res, next) => {
         res.status(500).json({ error: err.message })
     }
 }
+
+exports.getApplicationsByGender = async (req, res) => {
+    try {
+        const applicationsByGender = await Application.aggregate([
+            {
+                $group: {
+                    _id: '$gender',  
+                    total: { $sum: 1 }  
+                }
+            },
+            {
+                $sort: { _id: 1 }  
+            }
+        ]);
+
+        res.status(200).json({
+            status: 'success',
+            data: applicationsByGender
+        });
+    } catch (err) {
+        res.status(400).json({
+            status: 'fail',
+            message: err.message
+        });
+    }
+};

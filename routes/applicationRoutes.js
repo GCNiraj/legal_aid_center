@@ -8,6 +8,8 @@ router
     .post(authController.protect, applicationController.uploadVerificationDocument, applicationController.createApplication)
     .get(authController.protect, applicationController.getAllApplications) 
 
+router.get('/report/gender', applicationController.getApplicationsByGender);
+
 router
     .route('/:id')
     .get(authController.protect, applicationController.getApplication) 
