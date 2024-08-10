@@ -9,3 +9,13 @@ exports.getLoginPage = (req, res) => {
 exports.getRegisterPage = (req, res) => {
     res.sendFile(path.join(__dirname, '../', 'views', 'register.html'))
 }
+
+/* Dashboard Page */
+exports.getDashboardPage = (req, res) => {
+    res.sendFile(path.join(__dirname,'../','views','dashboard.html'))
+}
+
+/* Application Page */ 
+exports.getApplicationPage = (req, res) => {
+    res.sendFile(path.join(__dirname,'../', 'views', 'applicationForm.html'))
+}

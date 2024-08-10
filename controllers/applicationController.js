@@ -103,7 +103,7 @@ exports.createApplication = async (req, res) => {
     }
 }
 
-exports.updateDetails = async (req, res, next) => {
+exports.updateDetails = async (req, res) => {
     try{
         const application = await Application.findByIdAndUpdate(req.params.id, req.body)
         res.json({ data: application, status: "success"});

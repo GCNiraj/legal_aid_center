@@ -13,7 +13,7 @@ const login = async (email, password) => {
         if (res.data.status === 'success') {
             showAlert('success', 'Logged in successfully')
             window.setTimeout(() => {
-                location.assign('/')
+                location.assign('/dashboard')
             }, 1500)
             var obj = res.data.data.user
             console.log(obj)

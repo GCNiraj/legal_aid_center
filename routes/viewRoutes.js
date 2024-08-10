@@ -3,9 +3,10 @@ const router = express.Router()
 const viewsController = require('./../controllers/viewController')
 const authController = require('./../controllers/authController')
 
-// router.get('/', viewsController.getHome)
-router.get('/login', viewsController.getLoginPage)
+router.get('/dashboard', viewsController.getDashboardPage)
+router.get('/', viewsController.getLoginPage)
 router.get('/register', viewsController.getRegisterPage)
+router.get('/applicationForm', viewsController.getApplicationPage)
 // router.get('/me',authController.protect,viewsController.getProfile)
 
 
