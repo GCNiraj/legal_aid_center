@@ -42,8 +42,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/dashboard.min.css" />
+    <link rel="stylesheet" href="css/application.min.css" />
 
-    <title>Dashboard</title>
+    <title>Login</title>
   </head>
   <body>
     <!-- SIDEBAR -->
@@ -65,58 +66,45 @@
       </div>
       <ul class="side-menu top">
         <li class="active">
-          <a href="#">
+          <a href="./dashboard.html">
             <span class="material-symbols-outlined"> dashboard </span>
-            <span class="text"><a href="./dashboard.html">Dashboard</a></span>
+            <span class="text">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./application.html">
             <span class="material-symbols-outlined"> approval </span>
-            <span class="text"
-              ><a href="./application.html">Application</a></span
-            >
+            <span class="text">Application</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./eligibleCases.html">
             <span class="material-symbols-outlined"> alarm_on </span>
-            <span class="text"
-              ><a href="./eligibleCases.html">Eligible Cases</a></span
-            >
+            <span class="text">Eligible Cases</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./ineligibleCases.html">
             <span class="material-symbols-outlined"> dangerous </span>
-            <span class="text"
-              ><a href="./ineligibleCases.html">Ineligible Cases</a></span
-            >
+            <span class="text">Ineligible Cases</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./settledCases.html">
             <span class="material-symbols-outlined"> check_circle </span>
-            <span class="text"
-              ><a href="./settledCases.html">Settled Cases</a>Settled
-              Cases</span
-            >
+            <span class="text">Settled Cases</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./viewLawyers.html">
             <span class="material-symbols-outlined"> shield_person </span>
-            <span class="text"
-              ><a href="./viewLawyers.html">View Lawyers</a></span
-            >
+            <span class="text">View Lawyers</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="./addAdmin.html">
             <span class="material-symbols-outlined"> group </span>
-            <span class="text"
-              ><a href="./addAdmin.html">Add Admin/Lawyer</a></span
-            >
+            <span class="text">Add Admin/Lawyer</span>
           </a>
         </li>
       </ul>
@@ -125,24 +113,26 @@
         <hr />
         <li>
           <a href="#">
-            <span class="material-symbols-outlined"> account_circle </span>
-            <span class="text"><a href="./profile.html">Profile</a></span>
+            <span class="material-symbols-outlined d-inline">
+              account_circle
+            </span>
+            <span class="text d-inline">Profile</span>
           </a>
         </li>
         <hr />
         <li>
           <a href="#" class="logout">
             <span class="material-symbols-outlined"> logout </span>
-            <span class="text"><a href="#">Logout</a></span>
+            <span class="text">Logout</span>
           </a>
         </li>
       </ul>
     </section>
     <!-- SIDEBAR -->
-
     <!-- CONTENT -->
     <section id="content">
       <!-- MAIN -->
+
       <main>
         <div class="head-title">
           <div class="left">
@@ -175,78 +165,88 @@
             </button>
           </div>
         </div>
-
-        <ul class="box-info">
-          <li class="card01">
-            <span class="material-symbols-outlined fs-2"> assignment </span>
-            <span class="card-title fs-5">Total Cases</span>
-            <div class="text mt-3">
-              <h2>500+</h2>
+        <section class="Application-detail">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card h-100" style="width: 18rem">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card h-100" style="width: 18rem">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <h5>DOB</h5>
+                      <p>05/05/2005</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h5>CID</h5>
+                      <p>12345678901</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h5>Occupation</h5>
+                      <p>17456782</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h5>Occupation</h5>
+                      <p>17456782</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card h-100" style="width: 18rem">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <h5>Current Address</h5>
+                      <p>Thimphu, Kawang, Kabesa</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h5>Permanent Address</h5>
+                      <p>Bumthang, Chhokhor, Chhokhor</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h5>Total Household Member</h5>
+                      <p>8</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h5>Total Household Income</h5>
+                      <p>13,500</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <small>Recently Updated</small>
-          </li>
-          <li class="card02">
-            <span class="material-symbols-outlined fs-2"> alarm_on </span>
-            <span class="card-title fs-5">Active Cases</span>
-            <div class="text mt-3">
-              <h2>45</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-          <li class="card03">
-            <span class="material-symbols-outlined fs-2"> check_circle </span>
-            <span class="card-title fs-5">Settled Cases</span>
-            <div class="text mt-3">
-              <h2>450+</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-          <li class="card04">
-            <span class="material-symbols-outlined fs-2"> add_notes </span>
-            <span class="card-title fs-5">New Application</span>
-            <div class="text mt-3">
-              <h2>40+</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-        </ul>
-
-        <div class="table-data row gap-4">
-          <div class="col-lg-6">
-            <div class="head">
-              <h3>Application Mode</h3>
-            </div>
-            <div style="width: 650px; height: 500px">
-              <canvas id="acquisitions"></canvas>
+            <p class="mt-3 mb-3">
+              Public institutions and other relevant institutions, which
+              facilitates the application for legal aid (if any)
+            </p>
+            <div class="row">
+              <div class="col-lg-3">
+                <p>Institution Name</p>
+                <p class="fs-3">JSW Law School</p>
+              </div>
+              <div class="col-lg-3">
+                <p>Institution Name</p>
+                <p class="fs-3">JSW Law School</p>
+              </div>
+              <div class="col-lg-3"></div>
+              <div class="col-lg-3"></div>
             </div>
           </div>
-          <div class="todo col-lg-6">
-            <div class="head">
-              <h3>Case Types</h3>
-            </div>
-            <div style="width: 650px; height: 500px">
-              <canvas id="case-types-pie"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <div class="row table-data">
-          <div class="col-lg-12">
-            <div class="head">
-              <h3>Cases Graph</h3>
-            </div>
-            <div style="width: 100%">
-              <canvas id="cases-line-graph"></canvas>
-            </div>
-          </div>
-        </div>
+        </section>
       </main>
       <!-- MAIN -->
     </section>
     <!-- CONTENT -->
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./js/applicationModeChart.js"></script>
-  <script src="./js/dashboard.js"></script>
 </html>

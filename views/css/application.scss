@@ -1,0 +1,22 @@
+hr {
+  color: black;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  padding: 100px;
+}
+
+table tr:nth-child(1) {
+  background-color: #2c3e50;
+  color: white;
+}
+
+table a {
+  list-style-type: none;
+}
+
+td {
+  padding: 10px 40px;
+}
