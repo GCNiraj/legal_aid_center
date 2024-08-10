@@ -104,13 +104,7 @@ const applicationSchema = new mongoose.Schema({
             member_email: {
                 type: String
             },
-            member_currentvillage: {
-                type: String
-            },
-            member_currentgewog: {
-                type: String
-            },
-            member_currentdzongkhag: {
+            member_information: {
                 type: String
             }
         }
