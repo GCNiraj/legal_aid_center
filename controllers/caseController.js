@@ -211,3 +211,48 @@ exports.getCasesByFeeStructure = async (req, res) => {
         });
     }
 };
+
+exports.getTotalCases = async (req, res, next) => {
+    try {
+        const totalCases = await Case.countDocuments();
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                totalCases
+            }
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+exports.getActiveCases = async (req, res, next) => {
+    try {
+        const activeCases = await Case.countDocuments({ case_status: 'Active' });
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                activeCases
+            }
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+exports.getSettledCases = async (req, res, next) => {
+    try {
+        const settledCases = await Case.countDocuments({ case_status: 'Completed' });
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                settledCases
+            }
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};

@@ -232,3 +232,19 @@ exports.getApplicationsByOccupation = async (req, res) => {
         });
     }
 };
+
+exports.getTotalApplications = async (req, res, next) => {
+    try {
+        // Count all documents in the Application collection
+        const totalApplications = await Application.countDocuments();
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                totalApplications
+            }
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};

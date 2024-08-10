@@ -10,6 +10,7 @@ router
 
 router.get('/report/gender', applicationController.getApplicationsByGender);
 router.get('/report/occupation', applicationController.getApplicationsByOccupation);
+router.get('/totalApplications', applicationController.getTotalApplications);
 
 router
     .route('/:id')
