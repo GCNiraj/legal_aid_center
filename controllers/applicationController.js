@@ -57,7 +57,6 @@ exports.createApplication = async (req, res) => {
         }
 
         if (req.body.member_name !== 'undefined'){
-            console.log(typeof(req.body.member_name))
             if (typeof(req.body.member_name) === 'string'){
                 req.body.household_members = [{"member_name":req.body.member_name, "member_relationship": req.body.member_relationship, "member_occupation": req.body.member_occupation, "member_phone": req.body.member_phone, "member_email": req.body.member_email, "member_currentvillage": req.body.member_currentvillage, "member_currentgewog": req.body.member_currentgewog,"member_currentdzongkhag": req.body.member_currentdzongkhag}]
             }else{

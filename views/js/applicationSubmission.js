@@ -13,7 +13,7 @@ export const createApplication = async (data) => {
         if (res.data.status === 'success') {
             showAlert('success','Application submitted successfully!')
             window.setTimeout(() => {
-                location.assign('/')
+                location.reload()
             }, 1500)
         }
     } catch (err) {
