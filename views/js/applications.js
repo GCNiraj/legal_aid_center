@@ -24,6 +24,6 @@ const displayPendingApplications = (applications) =>{
     var arr = applications.data
     let j = 0
     for (let i=0; i<arr.length; i++){
-        if ()
+        console.log(arr[i])
     }
 }
