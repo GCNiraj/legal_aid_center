@@ -962,3 +962,26 @@
   label: 'Legal Aid Center Website',
   timestamp: 'Aug-09-2024 18:25:31'
 }
+{
+  level: 'error',
+  message: AppError: The user belonging to this token no longer exist
+      at exports.protect (/workspaces/CSF202/legal_aid_center/controllers/authController.js:347:17)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 05:13:33'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 05:14:02'
+}

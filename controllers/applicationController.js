@@ -47,11 +47,31 @@ exports.getAllApplications = async (req, res, next) => {
 
 exports.createApplication = async (req, res) => {
     try {
+
+        /* This is the start for making some data into array datatype */
         req.body.current_address = [{"current_village":req.body.current_village,"current_gewog":req.body.current_gewog,"current_dzongkhag":req.body.current_dzongkhag}]
         req.body.permanent_address = [{"permanent_village":req.body.permanent_village,"permanent_gewog":req.body.permanent_gewog,"permanent_dzongkhag":req.body.permanent_dzongkhag}]
+
+        if (req.body.dealing_official_name !== 'undefined'){
+            req.body.dealing_official = [{"dealing_official_name": req.body.dealing_official_name,"dealing_official_phone":req.body.dealing_official_phone,"dealing_official_email":req.body.dealing_official_email}]
+        }
+
+        if (req.body.member_name !== 'undefined'){
+            console.log(typeof(req.body.member_name))
+            if (typeof(req.body.member_name) === 'string'){
+                req.body.household_members = [{"member_name":req.body.member_name, "member_relationship": req.body.member_relationship, "member_occupation": req.body.member_occupation, "member_phone": req.body.member_phone, "member_email": req.body.member_email, "member_currentvillage": req.body.member_currentvillage, "member_currentgewog": req.body.member_currentgewog,"member_currentdzongkhag": req.body.member_currentdzongkhag}]
+            }else{
+                req.body.household_members = []
+                for (let i=0; i<req.body.member_name.length; i++){
+                    req.body.household_members.push({"member_name":req.body.member_name[i], "member_relationship": req.body.member_relationship[i], "member_occupation": req.body.member_occupation[i], "member_phone": req.body.member_phone[i], "member_email": req.body.member_email[i], "member_currentvillage": req.body.member_currentvillage[i], "member_currentgewog": req.body.member_currentgewog[i],"member_currentdzongkhag": req.body.member_currentdzongkhag[i]})
+                }
+            }
+        }
+        /* EOF */
+
+        /* This will filterout the files from the request body */
         const filteredBody = filterObj(req.body, 'registration_date','name','cid','dob','gender','occupation','number','email','current_address','permanent_address','institute_name','dealing_official','total_household_income','total_household_member','household_members','user')
 
-        console.log(req)
         if (req.body.verification_document !== 'undefined'){
             filteredBody.verification_document = req.files[0].filename
         }
@@ -77,7 +97,6 @@ exports.createApplication = async (req, res) => {
         }
 
         const application = await Application.create(filteredBody)
-
         res.status(200).json({data: application, status: 'success'})
     } catch (err) {
         res.status(500).json({error: err.message})
