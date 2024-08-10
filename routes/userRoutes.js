@@ -11,7 +11,10 @@ router.post('/resetPassword', authController.resetPassword);
 router.get('/logout',authController.logout)
 router.patch('/updateMyPassword',authController.protect,authController.updatePassword)
 router.patch('/updateMe',authController.protect,userController.uploadUserPhoto,userController.updateMe)
+router.post('/addLawyer', userController.addLawyer);
 
+// Route for the lawyer to set their password
+router.post('/setPassword/:token', userController.setPassword);
 
 // router.get('/resetPassword/:token', (req, res) => {
 //     // Render the form or a page to enter a new password

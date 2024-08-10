@@ -1,6 +1,8 @@
 const User = require('./../models/userModels')
 const AppError = require('../utils/appError')
 const multer = require('multer')
+const crypto = require('crypto');
+const nodemailer = require('nodemailer');
 
 const multerStorage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -114,3 +116,111 @@ exports.updateMe = async (req, res, next) => {
         res.status(500).json({error: err.message})
     }
 }
+
+
+exports.addLawyer = async (req, res) => {
+    try {
+        // Create a user with the role of 'Lawyer'
+        const user = await User.create({
+            name: req.body.name,
+            email: req.body.email,
+            role: 'Lawyer',
+            isVerified: false,
+            password: 'temporarypassword', // Placeholder password
+            phone: '0000000000', // Placeholder phone number
+            cid: 'temporaryCID', // Placeholder CID
+        });
+
+        // Generate a token for the lawyer to set their password
+        const resetToken = crypto.randomBytes(32).toString('hex');
+        user.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+        user.passwordResetExpires = Date.now() + 10 * 60 * 1000; // Token valid for 10 minutes
+        await user.save({ validateBeforeSave: false });
+
+        // Construct the password reset URL
+        const resetURL = `${req.protocol}://${req.get('host')}/setPassword/${resetToken}`;
+
+        // Send the email to the lawyer
+        await sendEmail({
+            email: user.email,
+            subject: 'Set your password',
+            message: `Please click on the following link to set your password: ${resetURL}. The link is valid for 10 minutes.`
+        });
+
+        res.status(200).json({
+            status: 'success',
+            message: 'Lawyer added successfully. Password setup link sent to the email.'
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+exports.setPassword = async (req, res, next) => {
+    try {
+        const { token, newPassword, passwordConfirm } = req.body;
+
+        // Validate inputs
+        if (!token) {
+            return next(new AppError('Reset token is missing', 400));
+        }
+        if (!newPassword) {
+            return next(new AppError('New password is missing', 400));
+        }
+        if (!passwordConfirm) {
+            return next(new AppError('Password confirmation is missing', 400));
+        }
+        
+        // Check if passwords match
+        if (newPassword !== passwordConfirm) {
+            return next(new AppError('Passwords do not match', 400));
+        }
+
+        // Hash the token to match against stored hash
+        const hashedToken = crypto.createHash('sha256').update(token).digest('hex');
+
+        // Find the user with the matching token and ensure token is not expired
+        const user = await User.findOne({
+            passwordResetToken: hashedToken,
+            passwordResetExpires: { $gt: Date.now() } // Token is valid if expiry date is in the future
+        });
+
+        if (!user) {
+            return next(new AppError('Token is invalid or has expired', 400));
+        }
+
+        // Update the user's password
+        user.password = newPassword;
+        user.passwordConfirm = passwordConfirm;
+        user.passwordResetToken = undefined; // Clear the reset token
+        user.passwordResetExpires = undefined; // Clear the reset expiry
+        user.isVerified = true; // Mark the user as verified
+        await user.save();
+
+        res.status(200).json({
+            status: 'success',
+            message: 'Password has been set successfully'
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+const sendEmail = async (options) => {
+    const transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        }
+    });
+
+    const mailOptions = {
+        from: 'Your App <noreply@yourapp.com>',
+        to: options.email,
+        subject: options.subject,
+        text: options.message
+    };
+
+    await transporter.sendMail(mailOptions);
+};

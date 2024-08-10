@@ -38,44 +38,12 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS  
     }
 });
-// exports.signup = async (req, res, next) => {
-//     try{
-//         const newUser = await User.create(req.body)
-//         createSendToken(newUser, 201, res)
-//     }catch (err) {
-//         res.status(500).json({ error: err.message});
-//     }
-// }
+
 const generateOTP = () => {
     return crypto.randomInt(100000, 999999).toString();
 };
 
-// exports.signup = async (req, res, next) => {
-//     try {
-//         const otp = generateOTP();
-//         const otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
 
-
-//         const newUser = await User.create({
-//             ...req.body,
-//             otp,
-//             otpExpires
-//         });
-
-//         const mailOptions = {
-//             from: 'info@law.com',
-//             to: newUser.email,
-//             subject: 'Your OTP Code',
-//             text: `Your OTP code is ${otp}. Please use it to complete your signup process.`
-//         };
-
-//         await transporter.sendMail(mailOptions);
-
-//         createSendToken(newUser, 201, res);
-//     } catch (err) {
-//         res.status(500).json({ error: err.message });
-//     }
-// };
 
 exports.signup = async (req, res, next) => {
     try {
@@ -129,35 +97,7 @@ exports.login = async (req, res, next) => {
 
         createSendToken(user, 200, res)
 
-        /* 2FA possibility start from here 
-
-
-        // Generate OTP and expiration time
-        const otp = generateOTP();
-        const otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
-
-        // Update user with OTP and expiration time
-        user.otp = otp;
-        user.otpExpires = otpExpires;
-        await user.save();
-
-        // Send OTP via email
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: user.email,
-            subject: 'Your OTP Code',
-            text: `Your OTP code is ${otp}. It is valid for 10 minutes.`
-        };
-
-        await transporter.sendMail(mailOptions);
-
-        // Respond with a message to enter OTP
-        res.status(200).json({
-            status: 'success',
-            message: 'OTP sent to your email. Please verify to complete the login process.'
-        });
-
-        end of 2FA possibility */
+        
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
