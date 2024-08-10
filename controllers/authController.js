@@ -223,6 +223,44 @@ exports.verifyOtp = async (req, res, next) => {
     }
 };
 
+// exports.forgotPassword = async (req, res, next) => {
+//     try {
+//         const { email } = req.body;
+
+//         // Find the user by email
+//         const user = await User.findOne({ email });
+
+//         if (!user) {
+//             return next(new AppError('There is no user with this email address.', 404));
+//         }
+
+//         // Generate a reset token
+//         const resetToken = crypto.randomBytes(32).toString('hex');
+
+//         // Hash the reset token and set it in the user object
+//         user.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+//         user.passwordResetExpires = Date.now() + 10 * 60 * 1000; // Token valid for 10 minutes
+//         await user.save();
+
+//         // Send email with reset token
+//         const resetURL = `${req.protocol}://${req.get('host')}/api/v1/users/resetPassword/${resetToken}`;
+//         const mailOptions = {
+//             from: process.env.EMAIL_USER,
+//             to: user.email,
+//             subject: 'Password Reset Request',
+//             text: `You requested a password reset. Please follow this link to reset your password: ${resetURL}. The link is valid for 10 minutes.`
+//         };
+
+//         await transporter.sendMail(mailOptions);
+
+//         res.status(200).json({
+//             status: 'success',
+//             message: 'Password reset token sent to your email!'
+//         });
+//     } catch (err) {
+//         res.status(500).json({ error: err.message });
+//     }
+// };
 exports.forgotPassword = async (req, res, next) => {
     try {
         const { email } = req.body;
@@ -234,71 +272,103 @@ exports.forgotPassword = async (req, res, next) => {
             return next(new AppError('There is no user with this email address.', 404));
         }
 
-        // Generate a reset token
-        const resetToken = crypto.randomBytes(32).toString('hex');
+        // Generate a 6-digit OTP
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
-        // Hash the reset token and set it in the user object
-        user.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
-        user.passwordResetExpires = Date.now() + 10 * 60 * 1000; // Token valid for 10 minutes
+        // Set OTP and expiration time in the user object
+        user.otp = otp;
+        user.otpExpires = Date.now() + 10 * 60 * 1000; // OTP valid for 10 minutes
         await user.save();
 
-        // Send email with reset token
-        const resetURL = `${req.protocol}://${req.get('host')}/resetPassword/${resetToken}`;
+        // Send email with the OTP
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: user.email,
-            subject: 'Password Reset Request',
-            text: `You requested a password reset. Please follow this link to reset your password: ${resetURL}. The link is valid for 10 minutes.`
+            subject: 'Password Reset OTP',
+            text: `Your OTP for password reset is: ${otp}. The OTP is valid for 10 minutes.`
         };
 
         await transporter.sendMail(mailOptions);
 
         res.status(200).json({
             status: 'success',
-            message: 'Password reset token sent to your email!'
+            message: 'OTP sent to your email!'
         });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
+// exports.resetPassword = async (req, res, next) => {
+//     try {
+//         const { token, newPassword, passwordConfirm } = req.body;
+
+//         // Validate inputs
+//         if (!token) {
+//             return next(new AppError('Reset token is missing', 400));
+//         }
+//         if (!newPassword) {
+//             return next(new AppError('New password is missing', 400));
+//         }
+//         if (!passwordConfirm) {
+//             return next(new AppError('Password confirmation is missing', 400));
+//         }
+        
+//         // Check if passwords match
+//         if (newPassword !== passwordConfirm) {
+//             return next(new AppError('Passwords do not match', 400));
+//         }
+
+//         // Hash the token to match against stored hash
+//         const hashedToken = crypto.createHash('sha256').update(token).digest('hex');
+
+//         // Find the user with the matching token and ensure token is not expired
+//         const user = await User.findOne({
+//             passwordResetToken: hashedToken,
+//             passwordResetExpires: { $gt: Date.now() } // Token is valid if expiry date is in the future
+//         });
+
+//         if (!user) {
+//             return next(new AppError('Token is invalid or has expired', 400));
+//         }
+
+//         // Update the user's password
+//         user.password = newPassword;
+//         user.passwordConfirm = passwordConfirm;
+//         user.passwordResetToken = undefined; // Clear the reset token
+//         user.passwordResetExpires = undefined; // Clear the reset expiry
+//         await user.save();
+
+//         res.status(200).json({
+//             status: 'success',
+//             message: 'Password has been reset successfully'
+//         });
+//     } catch (err) {
+//         res.status(500).json({ error: err.message });
+//     }
+// };
 exports.resetPassword = async (req, res, next) => {
     try {
-        const { token, newPassword, passwordConfirm } = req.body;
+        const { email, newPassword, passwordConfirm } = req.body;
 
-        // Validate inputs
-        if (!token) {
-            return next(new AppError('Reset token is missing', 400));
+        if (!email || !newPassword || !passwordConfirm) {
+            return next(new AppError('Please provide all required fields', 400));
         }
-        if (!newPassword) {
-            return next(new AppError('New password is missing', 400));
-        }
-        if (!passwordConfirm) {
-            return next(new AppError('Password confirmation is missing', 400));
-        }
-        
-        // Check if passwords match
+
         if (newPassword !== passwordConfirm) {
             return next(new AppError('Passwords do not match', 400));
         }
 
-        // Hash the token to match against stored hash
-        const hashedToken = crypto.createHash('sha256').update(token).digest('hex');
-
-        // Find the user with the matching token and ensure token is not expired
-        const user = await User.findOne({
-            passwordResetToken: hashedToken,
-            passwordResetExpires: { $gt: Date.now() } // Token is valid if expiry date is in the future
-        });
+        const user = await User.findOne({ email });
 
         if (!user) {
-            return next(new AppError('Token is invalid or has expired', 400));
+            return next(new AppError('No user found with this email address', 404));
         }
 
-        // Update the user's password
         user.password = newPassword;
         user.passwordConfirm = passwordConfirm;
-        user.passwordResetToken = undefined; // Clear the reset token
-        user.passwordResetExpires = undefined; // Clear the reset expiry
+        user.otp = undefined; 
+        user.otpExpires = undefined; 
+
         await user.save();
 
         res.status(200).json({
