@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const applicationSchema = new mongoose.Schema({
     registration_date: {
-        type: Date
+        type: Date,
+        default: Date.now()
     },
     name: {
         type: String,
