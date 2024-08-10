@@ -29,6 +29,8 @@ const login = async (email, password) => {
         
         if (err.response.data.message === 'Unauthorized'){
             showAlert('error', 'Error: Unverified email please verify your email',message)
+            
+
         }else{
             showAlert('error', 'Error: Incorrect email or password',message)
         }

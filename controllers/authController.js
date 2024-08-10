@@ -122,7 +122,9 @@ exports.login = async (req, res, next) => {
         }
 
         if (user.isVerified === false) {
-            return next(new AppError('Unauthorized', 401));
+            return next(new AppError('Unauthorized', 401) ) ;
+            
+            
         }
 
         createSendToken(user, 200, res)
