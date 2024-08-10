@@ -9,6 +9,7 @@ router
     .get(authController.protect, applicationController.getAllApplications) 
 
 router.get('/report/gender', applicationController.getApplicationsByGender);
+router.get('/report/occupation', applicationController.getApplicationsByOccupation);
 
 router
     .route('/:id')

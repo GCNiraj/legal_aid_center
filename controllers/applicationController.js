@@ -178,3 +178,29 @@ exports.getApplicationsByGender = async (req, res) => {
         });
     }
 };
+
+exports.getApplicationsByOccupation = async (req, res) => {
+    try {
+        const applicationsByOccupation = await Application.aggregate([
+            {
+                $group: {
+                    _id: '$occupation',  
+                    total: { $sum: 1 }  
+                }
+            },
+            {
+                $sort: { _id: 1 }  
+            }
+        ]);
+
+        res.status(200).json({
+            status: 'success',
+            data: applicationsByOccupation
+        });
+    } catch (err) {
+        res.status(400).json({
+            status: 'fail',
+            message: err.message
+        });
+    }
+};
