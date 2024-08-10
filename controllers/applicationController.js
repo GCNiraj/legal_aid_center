@@ -7,10 +7,10 @@ const multerStorage = multer.diskStorage({
         cb(null, 'archieve/application_data')
     },
     filename: (req, file, cb) => {
-        // var obj = JSON.parse(req.cookies.token)
+        var obj = JSON.parse(req.cookies.token)
         const ext = file.mimetype.split('/')[1]
         // cb(null, `user-${obj['_id']}-${Date.now()}.${ext}`)
-        cb(null, `user-${req.user.id}-${file.fieldname}-${Date.now()}.${ext}`)
+        cb(null, `user-${obj['_id']}-${file.fieldname}-${Date.now()}.${ext}`)
     }
 })
 const multerFilter = (req, file, cb) => {
