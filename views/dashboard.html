@@ -231,7 +231,7 @@
               <small>Recently Updated</small>
           </li>
       </ul>
-        <div class="table-data row gap-4">
+        <!-- <div class="table-data row gap-4">
           <div class="col-lg-6">
             <div class="head">
               <h3>Application Mode</h3>
@@ -259,7 +259,68 @@
               <canvas id="cases-line-graph"></canvas>
             </div>
           </div>
-        </div>
+        </div> -->
+        <div class="table-data row gap-4">
+          <div class="col-lg-6">
+              <div class="head">
+                  <h3>Application Mode</h3>
+              </div>
+              <div style="width: 650px; height: 500px">
+                  <canvas id="acquisitions"></canvas>
+              </div>
+          </div>
+          <div class="todo col-lg-6">
+              <div class="head">
+                  <h3>Case Types</h3>
+              </div>
+              <div style="width: 650px; height: 500px">
+                  <canvas id="case-types-pie"></canvas>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row table-data">
+          <div class="col-lg-12">
+              <div class="head">
+                  <h3>Cases Graph</h3>
+              </div>
+              <div style="width: 100%">
+                  <canvas id="cases-line-graph"></canvas>
+              </div>
+          </div>
+      </div>
+      
+      <!-- New charts added below -->
+      <div class="row table-data">
+          <div class="col-lg-6">
+              <div class="head">
+                  <h3>Cases by Status</h3>
+              </div>
+              <div style="width: 650px; height: 500px">
+                  <canvas id="cases-status-bar"></canvas>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="head">
+                  <h3>Cases by Fee Structure</h3>
+              </div>
+              <div style="width: 650px; height: 500px">
+                  <canvas id="fee-structure-doughnut"></canvas>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row table-data">
+          <div class="col-lg-12">
+              <div class="head">
+                  <h3>Applications by Occupation</h3>
+              </div>
+              <div style="width: 100%">
+                  <canvas id="occupation-bar"></canvas>
+              </div>
+          </div>
+      </div>
+      
       </main>
       <!-- MAIN -->
     </section>
