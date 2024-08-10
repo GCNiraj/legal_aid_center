@@ -997,3 +997,23 @@
   label: 'Legal Aid Center Website',
   timestamp: 'Aug-10-2024 08:48:10'
 }
+{
+  level: 'error',
+  message: AppError: You are not logged in! Please log in to get access.
+      at exports.protect (/workspaces/CSF202/legal_aid_center/controllers/authController.js:406:17)
+      at Layer.handle [as handle_request] (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:149:13)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:145:7)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:145:7)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:145:7)
+      at Route.dispatch (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:119:3)
+      at Layer.handle [as handle_request] (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at /workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/index.js:284:15
+      at Function.process_params (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/index.js:346:12) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 16:42:17'
+}

@@ -19,3 +19,8 @@ exports.getDashboardPage = (req, res) => {
 exports.getApplicationPage = (req, res) => {
     res.sendFile(path.join(__dirname,'../', 'views', 'applicationForm.html'))
 }
+
+/* Applications Page */
+exports.getApplications = (req, res) => {
+    res.sendFile(path.join(__dirname,'../','views','application.html'))
+} 

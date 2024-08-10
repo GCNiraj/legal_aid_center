@@ -7,6 +7,7 @@ router.get('/dashboard', viewsController.getDashboardPage)
 router.get('/', viewsController.getLoginPage)
 router.get('/register', viewsController.getRegisterPage)
 router.get('/applicationForm', viewsController.getApplicationPage)
+router.get('/application', viewsController.getApplications)
 // router.get('/me',authController.protect,viewsController.getProfile)
 
 

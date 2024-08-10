@@ -1,211 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap v5.3 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font - Jumolhari -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap v5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
-    <!-- Google Font - Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Google Font - Jumolhari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Google Font - Open Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Google Font - Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Google Icons -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+  <!-- Google Font - Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/dashboard.min.css" />
-    <link rel="stylesheet" href="css/application.min.css" />
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <title>Login</title>
-  </head>
-  <body>
-    <!-- SIDEBAR -->
-    <section id="sidebar">
-      <div class="row profile mt-5">
-        <div class="col-6 text-end">
-          <img
-            class="img-fluid profile-image"
-            src="./assets/images/profile.jpg"
-            alt=""
-            width="80px"
-            height="80px"
-          />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/dashboard.min.css" />
+  <link rel="stylesheet" href="css/application.min.css" />
+
+  <title>Login</title>
+</head>
+
+<body>
+  <!-- SIDEBAR -->
+  <section id="sidebar">
+    <div class="row profile mt-5">
+      <div class="col-6 text-end">
+        <img class="img-fluid profile-image" src="./assets/images/profile.jpg" alt="" width="80px" height="80px" />
+      </div>
+      <div class="col-6 text-white">
+        <h5>Ngawang</h5>
+        <p>Admin</p>
+      </div>
+    </div>
+    <ul class="side-menu top">
+      <li class="active">
+        <a href="./dashboard.html">
+          <span class="material-symbols-outlined"> dashboard </span>
+          <span class="text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="./application.html">
+          <span class="material-symbols-outlined"> approval </span>
+          <span class="text">Application</span>
+        </a>
+      </li>
+      <li>
+        <a href="./eligibleCases.html">
+          <span class="material-symbols-outlined"> alarm_on </span>
+          <span class="text">Eligible Cases</span>
+        </a>
+      </li>
+      <li>
+        <a href="./ineligibleCases.html">
+          <span class="material-symbols-outlined"> dangerous </span>
+          <span class="text">Ineligible Cases</span>
+        </a>
+      </li>
+      <li>
+        <a href="./settledCases.html">
+          <span class="material-symbols-outlined"> check_circle </span>
+          <span class="text">Settled Cases</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewLawyers.html">
+          <span class="material-symbols-outlined"> shield_person </span>
+          <span class="text">View Lawyers</span>
+        </a>
+      </li>
+      <li>
+        <a href="./addAdmin.html">
+          <span class="material-symbols-outlined"> group </span>
+          <span class="text">Add Admin/Lawyer</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="side-menu lower-menu">
+      <hr />
+      <li>
+        <a href="#">
+          <span class="material-symbols-outlined d-inline">
+            account_circle
+          </span>
+          <span class="text d-inline">Profile</span>
+        </a>
+      </li>
+      <hr />
+      <li>
+        <a href="#" class="logout">
+          <span class="material-symbols-outlined"> logout </span>
+          <span class="text"><a href="#">Logout</a></span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- SIDEBAR -->
+
+  <!-- CONTENT -->
+  <section id="content">
+    <!-- MAIN -->
+
+    <main>
+      <div class="head-title">
+        <div class="left">
+          <h1>Dashboard</h1>
+          <ul class="breadcrumb">
+            <li>
+              <p>11th August, 2024</p>
+            </li>
+          </ul>
         </div>
-        <div class="col-6 text-white">
-          <h5>Ngawang</h5>
-          <p>Admin</p>
+        <div class="search">
+          <input type="text" class="search__input" placeholder="Search" />
+          <button class="search__button">
+            <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                <path
+                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                </path>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="notification">
+          <button class="button">
+            <svg viewBox="0 0 448 512" class="bell">
+              <path
+                d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
+              </path>
+            </svg>
+          </button>
         </div>
       </div>
-      <ul class="side-menu top">
-        <li class="active">
-          <a href="./dashboard.html">
-            <span class="material-symbols-outlined"> dashboard </span>
-            <span class="text">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="./application.html">
-            <span class="material-symbols-outlined"> approval </span>
-            <span class="text">Application</span>
-          </a>
-        </li>
-        <li>
-          <a href="./eligibleCases.html">
-            <span class="material-symbols-outlined"> alarm_on </span>
-            <span class="text">Eligible Cases</span>
-          </a>
-        </li>
-        <li>
-          <a href="./ineligibleCases.html">
-            <span class="material-symbols-outlined"> dangerous </span>
-            <span class="text">Ineligible Cases</span>
-          </a>
-        </li>
-        <li>
-          <a href="./settledCases.html">
-            <span class="material-symbols-outlined"> check_circle </span>
-            <span class="text">Settled Cases</span>
-          </a>
-        </li>
-        <li>
-          <a href="./viewLawyers.html">
-            <span class="material-symbols-outlined"> shield_person </span>
-            <span class="text">View Lawyers</span>
-          </a>
-        </li>
-        <li>
-          <a href="./addAdmin.html">
-            <span class="material-symbols-outlined"> group </span>
-            <span class="text">Add Admin/Lawyer</span>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="side-menu lower-menu">
-        <hr />
-        <li>
-          <a href="#">
-            <span class="material-symbols-outlined d-inline">
-              account_circle
-            </span>
-            <span class="text d-inline">Profile</span>
-          </a>
-        </li>
-        <hr />
-        <li>
-          <a href="#" class="logout">
-            <span class="material-symbols-outlined"> logout </span>
-            <span class="text"><a href="#">Logout</a></span>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <!-- SIDEBAR -->
-
-    <!-- CONTENT -->
-    <section id="content">
-      <!-- MAIN -->
-
-      <main>
-        <div class="head-title">
-          <div class="left">
-            <h1>Dashboard</h1>
-            <ul class="breadcrumb">
-              <li>
-                <p>11th August, 2024</p>
-              </li>
-            </ul>
+      <div class="pending-case">
+        <div class="order">
+          <div class="head">
+            <h3>Pending Cases</h3>
+            <hr class="pending-divider" />
           </div>
-          <div class="search">
-            <input type="text" class="search__input" placeholder="Search" />
-            <button class="search__button">
-              <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-                <g>
-                  <path
-                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
-                  ></path>
-                </g>
-              </svg>
-            </button>
-          </div>
-          <div class="notification">
-            <button class="button">
-              <svg viewBox="0 0 448 512" class="bell">
-                <path
-                  d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"
-                ></path>
-              </svg>
-            </button>
-          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <p class="mt-3">Application 1</p>
+                </td>
+
+                <td class="text-end text-light">
+                  <span class="read-more"><a class="text-light" href="/application-id">Read More</a></span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="mt-3">Application 2</p>
+                </td>
+                <td class="text-end text-dark">
+                  <span class=""><a class="text-dark" href="/application-id">Read More</a></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="pending-case">
-          <div class="order">
-            <div class="head">
-              <h3>Pending Cases</h3>
-              <hr class="pending-divider" />
-            </div>
-            <table>
-              <tbody>
-                <tr>
-                  <td>
-                    <p class="mt-3">Application 1</p>
-                  </td>
+      </div>
+    </main>
+    <!-- MAIN -->
+  </section>
+  <!-- CONTENT -->
+</body>
 
-                  <td class="text-end text-light">
-                    <span class="read-more"
-                      ><a class="text-light" href="/application-id"
-                        >Read More</a
-                      ></span
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="mt-3">Application 2</p>
-                  </td>
-                  <td class="text-end text-dark">
-                    <span class=""
-                      ><a class="text-dark" href="/application-id"
-                        >Read More</a
-                      ></span
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </main>
-      <!-- MAIN -->
-    </section>
-    <!-- CONTENT -->
-  </body>
+<!-- Functionality Script Links below -->
+<script src="./js/applications.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<!-- EOL -->
+
 </html>
