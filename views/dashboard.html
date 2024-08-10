@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap"
       rel="stylesheet"
     />
 
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
 
@@ -79,7 +79,7 @@
         <li>
           <a href="./eligibleCases.html">
             <span class="material-symbols-outlined"> alarm_on </span>
-            <span class="text">ligible Cases</span>
+            <span class="text">Eligible Cases</span>
           </a>
         </li>
         <li>
@@ -91,7 +91,7 @@
         <li>
           <a href="./settledCases.html">
             <span class="material-symbols-outlined"> check_circle </span>
-            <span class="text">Settled Cases Cases</span>
+            <span class="text">Settled Cases</span>
           </a>
         </li>
         <li>
@@ -128,7 +128,7 @@
     <!-- SIDEBAR -->
 
     <!-- CONTENT -->
-    <section id="content">
+    <section id="content" >
       <!-- MAIN -->
       <main>
         <div class="head-title">
@@ -162,41 +162,7 @@
             </button>
           </div>
         </div>
-
-        <!-- <ul class="box-info">
-          <li class="card01">
-            <span class="material-symbols-outlined fs-2"> assignment </span>
-            <span class="card-title fs-5">Total Cases</span>
-            <div class="text mt-3">
-              <h2>500+</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-          <li class="card02">
-            <span class="material-symbols-outlined fs-2"> alarm_on </span>
-            <span class="card-title fs-5">Active Cases</span>
-            <div class="text mt-3">
-              <h2>45</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-          <li class="card03">
-            <span class="material-symbols-outlined fs-2"> check_circle </span>
-            <span class="card-title fs-5">Settled Cases</span>
-            <div class="text mt-3">
-              <h2>450+</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-          <li class="card04">
-            <span class="material-symbols-outlined fs-2"> add_notes </span>
-            <span class="card-title fs-5">Application</span>
-            <div class="text mt-3">
-              <h2>40+</h2>
-            </div>
-            <small>Recently Updated</small>
-          </li>
-        </ul> -->
+<div id="dashboard-content">
         <ul class="box-info">
           <li class="card01">
               <span class="material-symbols-outlined fs-2"> assignment </span>
@@ -231,36 +197,8 @@
               <small>Recently Updated</small>
           </li>
       </ul>
-        <!-- <div class="table-data row gap-4">
-          <div class="col-lg-6">
-            <div class="head">
-              <h3>Application Mode</h3>
-            </div>
-            <div style="width: 650px; height: 500px">
-              <canvas id="acquisitions"></canvas>
-            </div>
-          </div>
-          <div class="todo col-lg-6">
-            <div class="head">
-              <h3>Case Types</h3>
-            </div>
-            <div style="width: 650px; height: 500px">
-              <canvas id="case-types-pie"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <div class="row table-data">
-          <div class="col-lg-12">
-            <div class="head">
-              <h3>Cases Graph</h3>
-            </div>
-            <div style="width: 100%">
-              <canvas id="cases-line-graph"></canvas>
-            </div>
-          </div>
-        </div> -->
-        <div class="table-data row gap-4">
+      
+      <div class="table-data row gap-4">
           <div class="col-lg-6">
               <div class="head">
                   <h3>Application Mode</h3>
@@ -320,18 +258,58 @@
               </div>
           </div>
       </div>
-      
+
+      <div class="row mt-5">
+          <div class="col-lg-12 text-center">
+              <button id="download-pdf" class="btn btn-primary">Download as PDF</button>
+          </div>
+      </div>
+    </div>
       </main>
       <!-- MAIN -->
     </section>
     <!-- CONTENT -->
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- JS Files -->
+    <script src="./js/applicationModeChart.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="js/dashboardstats.js"></script>
+
+    <script>
+      document.getElementById('download-pdf').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf; // Access jsPDF from the jsPDF namespace
+    const dashboardElement = document.getElementById('dashboard-content');
+
+    html2canvas(dashboardElement).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+
+        const imgWidth = 210;
+        const pageHeight = 297;
+        const imgHeight = canvas.height * imgWidth / canvas.width;
+        let heightLeft = imgHeight;
+        let position = 0;
+
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+
+        while (heightLeft >= 0) {
+            position = heightLeft - imgHeight;
+            pdf.addPage();
+            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+        }
+
+        pdf.save('dashboard.pdf');
+    });
+});
+
+    </script>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-  <script src="./js/applicationModeChart.js"></script>
-  <script src="./js/dashboard.js"></script>
-  <script src="js/dashboardstats.js"></script>
-
 </html>
