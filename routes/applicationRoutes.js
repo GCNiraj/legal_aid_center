@@ -13,6 +13,7 @@ router.get('/report/occupation', applicationController.getApplicationsByOccupati
 
 router
     .route('/:id')
+    .update(authController.protect, applicationController.updateDetails)
     .get(authController.protect, applicationController.getApplication) 
     .patch(authController.protect, applicationController.uploadVerificationDocument, applicationController.updateApplication) 
     .delete(authController.protect, applicationController.deleteApplication); 

@@ -103,6 +103,15 @@ exports.createApplication = async (req, res) => {
     }
 }
 
+exports.updateDetails = async (req, res, next) => {
+    try{
+        const application = await Application.findByIdAndUpdate(req.params.id, req.body)
+        res.json({ data: application, status: "success"});
+    }catch (err) {
+        res.status(500).json({error: err.message})
+    }
+}
+
 exports.updateApplication = async (req, res) => {
     try {
         const filteredBody = filterObj(req.body, 'registration_date', 'name', 'cid', 'dob', 'gender', 'occupation', 'number', 'email', 'current_address', 'permanent_address', 'institute_name', 'dealing_official', 'total_household_income', 'total_household_member', 'household_members', 'user')
