@@ -1,0 +1,58 @@
+hr {
+  color: black;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  padding: 100px;
+}
+
+table tr:nth-child(1) {
+  background-color: #2c3e50;
+  color: white;
+}
+
+table a {
+  list-style-type: none;
+}
+
+td {
+  padding: 10px 40px;
+}
+
+.long-card {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.detail1:before {
+  content: "";
+  display: block;
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 120px;
+  position: absolute;
+  left: 25%;
+  margin-top: -15px;
+}
+
+.detail2:before {
+  content: "";
+  display: block;
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 120px;
+  position: absolute;
+  left: 48%;
+  margin-top: -15px;
+}
+
+.detail3:before {
+  content: "";
+  display: block;
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 120px;
+  position: absolute;
+  left: 71%;
+  margin-top: -15px;
+}/*# sourceMappingURL=application.css.map */

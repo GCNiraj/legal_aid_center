@@ -1,0 +1,1050 @@
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/UNDP-Hackathon/server/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'winston custom format',
+  timestamp: 'Aug-08-2024 16:34:11'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/UNDP-Hackathon/server/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'winston custom format',
+  timestamp: 'Aug-08-2024 16:34:13'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/UNDP-Hackathon/server/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'winston custom format',
+  timestamp: 'Aug-08-2024 16:34:13'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 10:36:11'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:90:25)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 10:38:09'
+}
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 13:20:51'
+}
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 13:21:13'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:30:16'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:30:16'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:30:44'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:30:53'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:32:52'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:35:18'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'verification_document',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:48:39'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'verification_document',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:49:18'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:50:55'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:51:00'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:51:01'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:51:02'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 15:51:06'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:05:00'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:05:32'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:248:10)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:05:53'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:12'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:23'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:24'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:26'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:27'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:27'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:28'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:28'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:248:10)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:28'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:248:10)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:28'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:29'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:29'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:29'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:29'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:43'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:08:47'
+}
+{
+  level: 'error',
+  message: MulterError: Unexpected field
+      at wrappedFileFilter (/workspaces/CSF202/legal_aid_center/node_modules/multer/index.js:40:19)
+      at Multipart.<anonymous> (/workspaces/CSF202/legal_aid_center/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (events.js:400:28)
+      at HeaderParser.cb (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:200:10)
+      at SBMH.push (/workspaces/CSF202/legal_aid_center/node_modules/streamsearch/lib/sbmh.js:104:16)
+      at Multipart._write (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:567:19)
+      at writeOrBuffer (internal/streams/writable.js:358:12) {
+    code: 'LIMIT_UNEXPECTED_FILE',
+    field: 'family_tree',
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:12:15'
+}
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:17:51'
+}
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:17:51'
+}
+{
+  level: 'error',
+  message: Error: Unexpected end of form
+      at Multipart._final (/workspaces/CSF202/legal_aid_center/node_modules/busboy/lib/types/multipart.js:588:17)
+      at callFinal (internal/streams/writable.js:610:10)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+    storageErrors: []
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 16:17:57'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:35'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:38'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:39'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:39'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:40'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25)
+      at runNextTicks (internal/process/task_queues.js:60:5)
+      at processImmediate (internal/timers.js:437:9) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:41'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:12:41'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:15:02'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:16:24'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:16:26'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:18:05'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:18:15'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:18:40'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:19:55'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:23:01'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:23:33'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-09-2024 18:25:31'
+}
+{
+  level: 'error',
+  message: AppError: The user belonging to this token no longer exist
+      at exports.protect (/workspaces/CSF202/legal_aid_center/controllers/authController.js:347:17)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 05:13:33'
+}
+{
+  level: 'error',
+  message: AppError: Unauthorized
+      at exports.login (/workspaces/CSF202/legal_aid_center/controllers/authController.js:125:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 05:14:02'
+}
+{
+  level: 'error',
+  message: AppError: Case not found
+      at exports.createReport (/workspaces/server/legal_aid_center/controllers/reportController.js:14:25)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 08:48:10'
+}
+{
+  level: 'error',
+  message: AppError: You are not logged in! Please log in to get access.
+      at exports.protect (/workspaces/CSF202/legal_aid_center/controllers/authController.js:406:17)
+      at Layer.handle [as handle_request] (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:149:13)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:145:7)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:145:7)
+      at next (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:145:7)
+      at Route.dispatch (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/route.js:119:3)
+      at Layer.handle [as handle_request] (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at /workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/index.js:284:15
+      at Function.process_params (/workspaces/CSF202/legal_aid_center/node_modules/express/lib/router/index.js:346:12) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-10-2024 16:42:17'
+}
+{
+  level: 'error',
+  message: AppError: Please provide an email and password!
+      at exports.login (/workspaces/server/legal_aid_center/controllers/authController.js:83:25)
+      at Layer.handle [as handle_request] (/workspaces/server/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at next (/workspaces/server/legal_aid_center/node_modules/express/lib/router/route.js:149:13)
+      at Route.dispatch (/workspaces/server/legal_aid_center/node_modules/express/lib/router/route.js:119:3)
+      at Layer.handle [as handle_request] (/workspaces/server/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at /workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:284:15
+      at Function.process_params (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:346:12)
+      at next (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:280:10)
+      at Function.handle (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:175:3)
+      at router (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:47:12) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-11-2024 02:56:58'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/server/legal_aid_center/controllers/authController.js:89:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-11-2024 02:57:18'
+}

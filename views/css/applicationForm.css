@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.application-form {
+  background-color: white;
+  padding: 50px !important;
+  margin-top: 0rem;
+  padding: 0 0rem 0 0rem;
+}
+
+.submit-btn {
+  color: #008db9;
+}
+
+#msform {
+  width: 700px;
+  margin: 25px auto;
+  text-align: center;
+  position: relative;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-align: left;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform input,
+#msform textarea {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+}
+
+/*buttons*/
+#msform .action-button {
+  background: #008db9;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+  width: 10%;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: #004466;
+  font-size: 9px;
+  width: 16.66%;
+  float: left;
+  position: relative;
+}
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 18px;
+  color: #333;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 59%;
+  height: 2px;
+  background: #004466;
+  position: absolute;
+  left: -30%;
+  top: 18px;
+  z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #004466;
+  color: white;
+}
+
+.form-check-input {
+  width: 16px !important;
+}
+
+.form-select {
+  border-radius: 15px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.input {
+  width: 10% !important;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  font-size: 36px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.input:focus {
+  border-bottom: 3px solid orange;
+  outline: none;
+}
+
+.input:nth-child(1) {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.register-submit {
+  margin-top: -101rem !important;
+  background-color: #008db9 !important;
+  color: white;
+  width: 100%;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.newCode {
+  margin-top: -49rem;
+}
+
+.gender {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px 0 10px 0;
+}
+
+#floatingTextarea {
+  height: 150px !important;
+}
+
+@media only screen and (min-width: 1201px) {
+  #msform {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  #msform {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  #msform {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #msform {
+    width: auto;
+  }
+  .image-col {
+    height: 100vh;
+    background: #004466;
+    padding: 10rem 2rem 0 2rem;
+  }
+  .login-form {
+    margin-top: 8rem;
+    padding: 0 1.5rem 0 1.5rem;
+  }
+  .input {
+    margin: 0 5px;
+    font-size: 20px;
+  }
+  .register-submit {
+    margin-top: -87rem !important;
+  }
+  .newCode {
+    margin-top: -42rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #msform {
+    width: auto;
+  }
+  .login-form {
+    width: 70vw;
+    margin-top: 6rem;
+    padding: 0 0rem 0 0rem;
+    margin-left: 15vw;
+  }
+  .register-submit {
+    margin-top: -90rem !important;
+    background-color: #008db9 !important;
+    color: white;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  .newCode {
+    margin-top: -43rem;
+  }
+}/*# sourceMappingURL=applicationForm.css.map */
