@@ -33,6 +33,8 @@ exports.getApplicationDetails = (req, res) => {
 exports.getSetPassword = (req, res) => {
     res.sendFile(path.join(__dirname,'../','views','setPassword.html'))
 } 
+
+/* Case Details Page */
 exports.getCaseDetails = (req, res) => {
     res.sendFile(path.join(__dirname,'../','views','caseDetails.html'))
 }

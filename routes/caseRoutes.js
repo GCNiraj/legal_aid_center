@@ -17,7 +17,7 @@ router.get('/settledCases', caseController.getSettledCases);
 
 router.route('/:id')
     .get(caseController.getCaseById)
-    .put(caseController.updateCase)
+    .patch(caseController.updateCase)
     .delete(caseController.deleteCase);
 
 module.exports = router;
