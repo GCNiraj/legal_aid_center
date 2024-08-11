@@ -1017,3 +1017,34 @@
   label: 'Legal Aid Center Website',
   timestamp: 'Aug-10-2024 16:42:17'
 }
+{
+  level: 'error',
+  message: AppError: Please provide an email and password!
+      at exports.login (/workspaces/server/legal_aid_center/controllers/authController.js:83:25)
+      at Layer.handle [as handle_request] (/workspaces/server/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at next (/workspaces/server/legal_aid_center/node_modules/express/lib/router/route.js:149:13)
+      at Route.dispatch (/workspaces/server/legal_aid_center/node_modules/express/lib/router/route.js:119:3)
+      at Layer.handle [as handle_request] (/workspaces/server/legal_aid_center/node_modules/express/lib/router/layer.js:95:5)
+      at /workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:284:15
+      at Function.process_params (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:346:12)
+      at next (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:280:10)
+      at Function.handle (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:175:3)
+      at router (/workspaces/server/legal_aid_center/node_modules/express/lib/router/index.js:47:12) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-11-2024 02:56:58'
+}
+{
+  level: 'error',
+  message: AppError: Incorrect email or password
+      at exports.login (/workspaces/server/legal_aid_center/controllers/authController.js:89:25) {
+    statusCode: 401,
+    status: 'fail',
+    isOperational: true
+  },
+  label: 'Legal Aid Center Website',
+  timestamp: 'Aug-11-2024 02:57:18'
+}

@@ -43,7 +43,7 @@ export const verifyOTP = async (email, otp) => {
         if (res.data.status === 'success') {
             showAlert('success', 'Registration Successful!')
             window.setTimeout(() => {
-                location.assign('/login')
+                location.assign('/')
             }, 1500)
         }
     } catch (err) {
