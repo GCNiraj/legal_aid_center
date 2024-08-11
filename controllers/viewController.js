@@ -36,3 +36,11 @@ exports.getSetPassword = (req, res) => {
 exports.getCaseDetails = (req, res) => {
     res.sendFile(path.join(__dirname,'../','views','caseDetails.html'))
 }
+
+exports.getUserDashboard = (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/users/userDashboard.html'));
+}
+
+exports.getLawyerDashboard = (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/lawyer/lawyerDashboard.html'));
+}

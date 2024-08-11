@@ -12,14 +12,33 @@ const login = async (email, password) => {
         })
         if (res.data.status === 'success') {
             showAlert('success', 'Logged in successfully')
-            window.setTimeout(() => {
-                location.assign('/dashboard')
-            }, 1500)
+            // window.setTimeout(() => {
+            //     location.assign('/dashboard')
+            // }, 1500)
             var obj = res.data.data.user
             console.log(obj)
             document.cookie = ' token = ' + JSON.stringify(obj)
             console.log(obj)
             localStorage.setItem('user', JSON.stringify(obj));
+            if (obj.role === 'Admin') {
+                window.setTimeout(() => {
+                    location.assign('/adminDashboard');
+                }, 1500);
+            } else if (obj.role === 'Lawyer') {
+                window.setTimeout(() => {
+                    location.assign('/lawyerDashboard');
+                }, 1500);
+            } else if (obj.role === 'User') {
+                window.setTimeout(() => {
+                    location.assign('/userDashboard');
+                }, 1500);
+            } else {
+                // Default to a general dashboard or an error page
+                window.setTimeout(() => {
+                    location.assign('/dashboard');
+                }, 1500);
+            }
+        
 
         }
     } catch (err) {
