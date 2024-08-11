@@ -29,3 +29,10 @@ exports.getApplications = (req, res) => {
 exports.getApplicationDetails = (req, res) => {
     res.sendFile(path.join(__dirname,'../','views','applicationDetails.html'))
 } 
+
+exports.getSetPassword = (req, res) => {
+    res.sendFile(path.join(__dirname,'../','views','setPassword.html'))
+} 
+exports.getCaseDetails = (req, res) => {
+    res.sendFile(path.join(__dirname,'../','views','caseDetails.html'))
+}

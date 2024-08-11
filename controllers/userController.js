@@ -124,11 +124,11 @@ exports.addLawyer = async (req, res) => {
         const user = await User.create({
             name: req.body.name,
             email: req.body.email,
-            role: 'Lawyer',
+            role: req.body.role,
             isVerified: false,
             password: 'temporarypassword', // Placeholder password
-            phone: '0000000000', // Placeholder phone number
-            cid: 'temporaryCID', // Placeholder CID
+            phone: req.body.phone, // Placeholder phone number
+            cid: req.body.cid, // Placeholder CID
         });
 
         // Generate a token for the lawyer to set their password
@@ -205,6 +205,7 @@ exports.setPassword = async (req, res, next) => {
         res.status(500).json({ error: err.message });
     }
 };
+
 
 const sendEmail = async (options) => {
     const transporter = nodemailer.createTransport({

@@ -282,7 +282,7 @@
     <script src="js/dashboardstats.js"></script>
 
     <script>
-      document.getElementById('download-pdf').addEventListener('click', () => {
+     document.getElementById('download-pdf').addEventListener('click', () => {
     const { jsPDF } = window.jspdf; // Access jsPDF from the jsPDF namespace
     const dashboardElement = document.getElementById('dashboard-content');
 
@@ -290,25 +290,32 @@
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF('p', 'mm', 'a4');
 
-        const imgWidth = 210;
+        const imgWidth = 190; // Adjust for margin (padding)
         const pageHeight = 297;
         const imgHeight = canvas.height * imgWidth / canvas.width;
         let heightLeft = imgHeight;
-        let position = 0;
+        let position = 30; // Starting position, accounting for title and padding
 
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        // Add a title to the PDF
+        pdf.setFontSize(22);
+        pdf.text('REPORT', pdf.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
+
+        // Add the image of the dashboard with padding
+        pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
         heightLeft -= pageHeight;
 
         while (heightLeft >= 0) {
-            position = heightLeft - imgHeight;
+            position = heightLeft - imgHeight + 30; // Adjust for title space
             pdf.addPage();
-            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
             heightLeft -= pageHeight;
         }
 
         pdf.save('dashboard.pdf');
     });
 });
+
+
 
     </script>
   </body>

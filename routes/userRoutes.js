@@ -13,22 +13,9 @@ router.patch('/updateMyPassword',authController.protect,authController.updatePas
 router.patch('/updateMe',authController.protect,userController.uploadUserPhoto,userController.updateMe)
 router.post('/addLawyer', userController.addLawyer);
 
-// Route for the lawyer to set their password
-router.post('/setPassword/:token', userController.setPassword);
+router.post('/setPassword', userController.setPassword);
 
-// router.get('/resetPassword/:token', (req, res) => {
-//     // Render the form or a page to enter a new password
-//     res.send(`
-//         <form action="/api/v1/users/resetPassword" method="POST">
-//             <input type="hidden" name="token" value="${req.params.token}" />
-//             <label for="newPassword">New Password:</label>
-//             <input type="password" id="newPassword" name="newPassword" required />
-//             <label for="passwordConfirm">Confirm Password:</label>
-//             <input type="password" id="passwordConfirm" name="passwordConfirm" required />
-//             <button type="submit">Reset Password</button>
-//         </form>
-//     `);
-// });
+
 
 
 router

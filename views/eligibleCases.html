@@ -197,7 +197,8 @@
             </button>
           </div>
         </div>
-
+        
+        
         <div class="pending-case mb-5">
           <div class="order">
             <div class="head">
@@ -205,48 +206,13 @@
               <hr class="pending-divider" />
             </div>
             <table>
-              <tbody>
-                <tr>
-                  <td>
-                    <p class="mt-3">LAC-009-2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">10/08/2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">Dechen Namgay</p>
-                  </td>
-                  <td class="text-end text-dark">
-                    <span class="read-more"
-                      ><a class="text-dark" href="/application-id"
-                        >Read More >></a
-                      ></span
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="mt-3">LAC-008-2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">02/08/2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">Ngawang Delma</p>
-                  </td>
-                  <td class="text-end text-dark">
-                    <span class=""
-                      ><a class="text-dark" href="/application-id"
-                        >Read More >></a
-                      ></span
-                    >
-                  </td>
-                </tr>
+              <tbody id="new-cases-container">
+                <!-- New cases will be populated here -->
               </tbody>
             </table>
           </div>
         </div>
-
+        
         <div class="pending-case">
           <div class="order">
             <div class="head">
@@ -254,50 +220,19 @@
               <hr class="pending-divider" />
             </div>
             <table>
-              <tbody>
-                <tr>
-                  <td>
-                    <p class="mt-3">LAC-009-2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">10/08/2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">Dechen Namgay</p>
-                  </td>
-                  <td class="text-end text-dark">
-                    <span class="read-more"
-                      ><a class="text-dark" href="/application-id"
-                        >Read More >></a
-                      ></span
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="mt-3">LAC-008-2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">02/08/2024</p>
-                  </td>
-                  <td>
-                    <p class="mt-3">Ngawang Delma</p>
-                  </td>
-                  <td class="text-end text-dark">
-                    <span class=""
-                      ><a class="text-dark" href="/application-id"
-                        >Read More >></a
-                      ></span
-                    >
-                  </td>
-                </tr>
+              <tbody id="active-cases-container">
+                <!-- Active cases will be populated here -->
               </tbody>
             </table>
           </div>
         </div>
+        
       </main>
       <!-- MAIN -->
     </section>
-    <!-- CONTENT -->
+    <!-- CONTENT -->    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="js/eligibleCases.js"></script>
+
   </body>
 </html>

@@ -2,6 +2,7 @@
 async function updateTotalCases() {
     try {
         const response = await axios.get('/api/v1/cases/totalCases');
+        console.log(response)
         document.querySelector('.card01 .text h2').textContent = `${response.data.data.totalCases}+`;
     } catch (error) {
         console.error('Error fetching total cases:', error);

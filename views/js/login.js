@@ -19,6 +19,8 @@ const login = async (email, password) => {
             console.log(obj)
             document.cookie = ' token = ' + JSON.stringify(obj)
             console.log(obj)
+            localStorage.setItem('user', JSON.stringify(obj));
+
         }
     } catch (err) {
         err.response.data.message
