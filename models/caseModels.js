@@ -81,6 +81,13 @@ const caseSchema = new mongoose.Schema({
         unique: true
     }
 })
+caseSchema.pre(/^find/, function(next){
+    this.populate({
+        path: 'application',
+        select: 'name'
+    })
+    next()
+})
 
 const Case = mongoose.model('Case', caseSchema)
 

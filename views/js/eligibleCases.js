@@ -1,59 +1,53 @@
 // Function to fetch all eligible cases from the backend
 const fetchAllCases = async () => {
     try {
-        const response = await axios.get('http://localhost:4001/api/v1/cases');
-        return response.data.data;
-    } catch (error) {
-        console.error('Error fetching cases:', error);
-        return [];
+        const res = await axios({
+            method: 'GET',
+            url: 'http://localhost:4001/api/v1/cases',
+        })
+        displayCases(res.data)
+    } catch (err) {
+        console.log(err)
     }
-};
+}
+fetchAllCases()
 
-// Function to redirect to case details page
-const redirectToCaseDetails = (caseId) => {
-    localStorage.setItem('case_id', caseId); // Store the case ID in localStorage for later use
-    location.assign(`/caseDetails/${caseId}`); // Redirect to the case details page
-};
+const displayCases = (cases) => {
+    var arr = cases.data
+    for (let i = 0; i < arr.length; i++) {
+        var tr = document.querySelector('.app_no').cloneNode(true)
 
-// Function to populate cases into the HTML
-const populateCases = (cases) => {
-    const newCasesContainer = document.getElementById('new-cases-container');
-    const activeCasesContainer = document.getElementById('active-cases-container');
+        var app_name = tr.querySelector('.app_name')
+        app_name.innerHTML = 'LAC-00' + String(i) + '-2024'
 
-    newCasesContainer.innerHTML = ''; // Clear existing content
-    activeCasesContainer.innerHTML = ''; // Clear existing content
+        var app_date = tr.querySelector('.app_date')
+        app_date.innerHTML = formatCurrentDate()
 
-    cases.forEach((caseItem, index) => {
-        const caseRow = `
-            <tr>
-                <td>
-                    <p class="mt-3">LAC-00${index + 1}-2024</p>
-                </td>
-                <td>
-                    <p class="mt-3">${new Date(caseItem.appointment_date).toLocaleDateString()}</p>
-                </td>
-                <td>
-                    <p class="mt-3">${caseItem.name_lawfirm || 'N/A'}</p>
-                </td>
-                <td class="text-end text-dark">
-                    <span class="read-more">
-                        <a class="text-dark" href="javascript:void(0);" onclick="redirectToCaseDetails('${caseItem._id}')">Read More >></a>
-                    </span>
-                </td>
-            </tr>
-        `;
+        var app_applicant = tr.querySelector('.app_applicant')
+        app_applicant.innerHTML = arr[i].application._id
 
-        // Adjusting the condition to reflect possible case_status values
-        if (caseItem.case_status === 'On Progress') {
-            newCasesContainer.insertAdjacentHTML('beforeend', caseRow);
-        } else if (caseItem.case_status === 'Active') {
-            activeCasesContainer.insertAdjacentHTML('beforeend', caseRow);
-        }
-    });
-};
+        var unique = tr.querySelector('.read-more')
+        unique.innerHTML = `<a class="text-dark" id="` + arr[i]._id + `")>Read More >></a>`
 
-// Initialize and populate the cases when the page loads
-document.addEventListener('DOMContentLoaded', async () => {
-    const cases = await fetchAllCases();
-    populateCases(cases);
-});
+        unique.addEventListener('click', () => recordId(arr[i]._id))
+
+        var tr2 = document.querySelector('.app_no')
+        tr2.insertAdjacentElement('afterend', tr)
+
+    }
+    document.querySelector('.app_no').remove()
+}
+
+function formatCurrentDate() {
+    const today = new Date();
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    const formatter = new Intl.DateTimeFormat('en-GB', options);
+    const formattedDate = formatter.format(today);
+    return formattedDate;
+}
+
+function recordId(id) {
+    localStorage.setItem('caseid', id)
+    location.assign('/caseDetails')
+    console.log("Cause")
+}

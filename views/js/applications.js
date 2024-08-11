@@ -14,7 +14,7 @@ const allApplications = async () => {
         })
         displayPendingApplications(res.data)
     } catch (err) {
-
+        console.log(err)
     }
 }
 
